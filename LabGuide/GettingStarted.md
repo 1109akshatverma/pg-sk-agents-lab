@@ -50,7 +50,7 @@ Welcome to your Postgre SQL and SK Agents Lab Workshop, Let's begin by making th
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![Access Your VM and Lab Guide](./Images/LabVM.png)
+![Access Your VM and Lab Guide](./Images/LabVM1.png)
 
 > **NOTE**: **If you see a PowerShell window running, please minimize it after accessing the environment to ensure the script continues to run in the background without interruption.**
 
