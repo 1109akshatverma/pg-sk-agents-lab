@@ -1,4 +1,4 @@
-# Postgre SQL and SK Agents Lab
+# Build Agentic AI with Semantic Kernel and GraphRAG on PostgreSQL 
 
 ### Overall Estimated Duration: 4 Hours
 
