@@ -58,7 +58,7 @@ Once you're ready to dive in, your virtual machine and **Guide** will be right a
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![](./Images/ZoomIn.png)
+![](./Images/ZoomIn1.png)
 
 ## Virtual Machine & Lab Guide
 
