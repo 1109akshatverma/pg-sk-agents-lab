@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code using Entra ID authentication. This includes assigning an administrator and configuring a secure database connection through the VS Code PostgreSQL extension.
 
-1. On the Azure portal home page, search for **Resource groups(1)** in the search bar and select **Resource groups(2)** from the results.
+1. On the Azure portal home page, search for **Resource groups (1)** in the search bar and select **Resource groups (2)** from the results.
 
    ![](Images/L1-S1.png)
 
@@ -30,7 +30,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/L1-S3.png)
 
-1. From the left panel, select **Authentication (1)** under Security. Verify that the authentication method is set to **Microsoft Authentication Method only (2)**. Then, click **Add Microsoft Entra Administrators (3)**.
+1. From the left panel, select **Authentication (1)** under Security. Verify that the authentication method is set to **Microsoft Authentication Method only (2)**. Then, click **Add Microsoft Entra administrators (3)**.
 
    ![](Images/L1-S4.png)
 
@@ -48,7 +48,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. On your LabVM desktop, double-click the VS Code icon to open Visual Studio Code.
 
-1. Once inside VS Code, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **Add Connection (2)** button in the POSTGRESQL panel.
+1. Once inside VS Code, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **+ Add Connection (2)** button in the POSTGRESQL panel.
 
    ![](Images/L1-S8.png)
 
@@ -123,7 +123,7 @@ In this task, you initialize the database with sample tables and data, configure
 
    ![](Images/E1-S45.png)
 
-1. Minimise VS Code and on the Lab VM, search for **Powershell(1)** in the search bar and select **Windows PowerShell(2)**.
+1. Minimise VS Code and on the Lab VM, search for **Powershell (1)** in the search bar and select **Windows PowerShell (2)**.
 
    ![](Images/E1-S44.png) 
 
@@ -134,7 +134,7 @@ In this task, you initialize the database with sample tables and data, configure
    ```
    ![](Images/E1-S46.png)
 
-1. On the window that appears, select the Azure account **<inject key="AzureAdUserEmail"></inject>(1)** that was used to log in earlier and click on **Continue(2)**.
+1. On the window that appears, select the Azure account **<inject key="AzureAdUserEmail"></inject> (1)** that was used to log in earlier and click on **Continue (2)**.
 
    ![](Images/E1-S47.png)
 
@@ -157,7 +157,7 @@ In this task, you initialize the database with sample tables and data, configure
 
    ![](Images/E1-S49.png)
 
-1. Maximize **VS Code**. Click on the **Elephant icon(1)** from the left. Expand the connection **lab(2)**.  
+1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the connection **lab (2)**.  
    - **Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
 
    ![](Images/L1-S22.png)
