@@ -20,63 +20,67 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. On the Azure portal home page, search for **Resource groups (1)** in the search bar and select **Resource groups (2)** from the results.
 
-   ![](Images/L1-S1.png)
+   ![](Images/PostgreSQL-image5.png)
 
 1. Select the **SKAgents-<inject key="Deployment ID" enableCopy="false"/>** resource group.
 
-   ![](Images/L1-S2.png)
+   ![](Images/PostgreSQL-image6.png)
 
 1. Verify that the **Azure OpenAI** and **Azure Database for PostgreSQL Flexible Server** resources have been created. Then, select the **PostgreSQL Flexible Server instance**.
 
-   ![](Images/L1-S3.png)
+   ![](Images/PostgreSQL-image7.png)
 
-1. From the left panel, select **Authentication (1)** under Security. Verify that the authentication method is set to **Microsoft Authentication Method only (2)**. Then, click **Add Microsoft Entra administrators (3)**.
+1. From the left panel, expand **Security (1)** then select **Authentication (1)**. Verify that the authentication method is set to **Microsoft Authentication Method only (2)**. Then, click **Add Microsoft Entra administrators (3)**.
 
-   ![](Images/L1-S4.png)
+   ![](Images/PostgreSQL-image8.png)
 
-1. In the window that appears, search for **<inject key="AzureAdUserEmail"></inject>**, select the **checkbox (2)** next to it, and click **Select(3)**.
+1. In the window that appears, search for **<inject key="AzureAdUserEmail"></inject> (1)**, select the **checkbox (2)** next to it, and click **Select(3)**.
 
-   ![](Images/L1-S5.png)
+   ![](Images/PostgreSQL-image9.png)
 
-1. Confirm that **<inject key="AzureAdUserEmail"></inject>(1)** is selected, then click **Save(2)**.
+1. Confirm that **<inject key="AzureAdUserEmail"></inject> (1)** is selected, then click **Save (2)**.
 
-   ![](Images/L1-S6.png)
+   ![](Images/PostgreSQL-image10.png)
 
 1. Wait for the deployment to complete.
 
-   ![](Images/L1-S7.png)
+   ![](Images/PostgreSQL-image11.png)
 
-1. On your LabVM desktop, double-click the VS Code icon to open Visual Studio Code.
+1. On your **LabVM** desktop, double-click the **VS Code** icon to open Visual Studio Code.
 
 1. Once inside VS Code, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **+ Add Connection (2)** button in the POSTGRESQL panel.
 
-   ![](Images/L1-S8.png)
+   ![](Images/PostgreSQL-image12.png)
 
+   >**Note**: Please wait for a while until the connection is established.
+   
 1. Select **Browse Azure** as the input type option.
 
     ![](Images/L1-S9.png)
 
 1. A pop-up will appear prompting you to sign in to Azure. Click **Allow**.
 
-    ![](Images/L1-S10.png)
+    ![](Images/PostgreSQL-image13.png)
 
-1. Login with your Lab Credentials
+1. When the sign-in window appears, please enter the username provided below and click Next.
 
     - **Username:** <inject key="AzureAdUserEmail"></inject>
 
-      ![](Images/L1-S11.png)
+      ![](Images/PostgreSQL-image14.png)
 
+1. When the **Enter Temporary Access Password** window appears, enter the password provided below and click **Sign in**.
+    
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-      ![](Images/Password.png)
+      ![](Images/PostgreSQL-image15.png)
 
 1. Click **Yes, all apps**.
 
-    ![](Images/L1-S13.png)
+    ![](Images/PostgreSQL-image16.png)
 
-1. Click **"Done"**.
+1. Click **Done** on the Account added to this device window.
 
-   ![](Images/L1-S14.png)
+   ![](Images/PostgreSQL-image17.png)
 
 1. Back on the "Connection Dialog", for each of the options, click each drop down and select the following options:
     - Subscription: Select the **default Subscription provided (1)**.
@@ -115,17 +119,17 @@ In this task, you initialize the database with sample tables and data, configure
 
    ![](Images/L1-S20.png) 
 
-1. Select "Yes,I trust the authors".
+1. Select **Yes,I trust the authors**.
 
    ![](Images/L1-S21.png)
 
 1. Expand the **Scripts folder(1)**, open **get_env.ps1(2)**, update the Resource Group name as **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**, and save the file.
 
-   ![](Images/E1-S45.png)
+   ![](Images/PostgreSQL-image18.png)
 
-1. Minimise VS Code and on the Lab VM, search for **Powershell (1)** in the search bar and select **Windows PowerShell (2)**.
+1. Minimise **VS Code** and on the Lab VM, search for **Powershell (1)** in the search bar and select **Windows PowerShell (2)**.
 
-   ![](Images/E1-S44.png) 
+   ![](Images/PostgreSQL-image19.png)
 
 1. Execute the command below to log in to Azure.
 
@@ -135,12 +139,12 @@ In this task, you initialize the database with sample tables and data, configure
    ![](Images/E1-S46.png)
 
 1. On the window that appears, select the Azure account **<inject key="AzureAdUserEmail"></inject> (1)** that was used to log in earlier and click on **Continue (2)**.
-
-   ![](Images/E1-S47.png)
+ 
+   ![](Images/PostgreSQL-image21.png)  
 
 1. Back in the terminal, type **1** and press **Enter** to select the default subscription that appears.
 
-   ![](Images/E1-S48.png)
+    ![](Images/PostgreSQL-image20.png)
 
 1. Execute the below command to navigate to the scripts folder.
   
@@ -158,6 +162,7 @@ In this task, you initialize the database with sample tables and data, configure
    ![](Images/E1-S49.png)
 
 1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the connection **lab (2)**.  
+
    - **Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
 
    ![](Images/L1-S22.png)
