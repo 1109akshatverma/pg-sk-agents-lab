@@ -18,9 +18,9 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    ![](Images/L2-S0.png)    
 
-1. To set up the kernel, click on **Kernel** and then select **Select Another Kernel**.
+1. To set up the kernel, click on **Select Kernel (1)** and then select **Install/Enable suggested extension Python + Jupyter (2)**.
 
-   ![](Images/L2-S22.png)
+   ![](Images/PostgreSQL-image27.png)
    
 1. Select **Python Environments** and then choose **Python 3.10.0**.
 
