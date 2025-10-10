@@ -92,17 +92,17 @@ Feel free to **start, stop, or restart** your virtual machine as needed from the
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-     ![Enter Your Username](./Images/UserName.png)
+     ![](Images/PostgreSQL-image1.png)
 
 3. Next, provide your password:
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-     ![Enter Your Password](./Images/Password.png)
+     ![](Images/PostgreSQL-image2.png)
 
-4. If **Action required** pop-up window appears, click on **Ask later**.
-5. If prompted to **stay signed in**, you can click **No**.
-6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
+4. If prompted to **stay signed in**, you can click **No**.
+
+   ![](Images/PostgreSQL-image3.png)
 
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
@@ -138,7 +138,7 @@ Learner Support Contacts:
 
 Click **Next** from the bottom right corner to embark on your Lab journey!
 
-![Start Your Azure Journey](./Images/PageNo2.png)
+![](Images/PostgreSQL-image4.png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
 
