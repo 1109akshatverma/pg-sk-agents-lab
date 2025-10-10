@@ -81,6 +81,10 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
     ![](Images/L2-S10.png)
 
+   >**Note**: If your not able to press **CTRL+SHIFT+C** to open the **VS Code action panel**, select **create_graph.sql(1)** file, select **Connection (2)** icon then choose **lab<inject key="Deployment ID" enableCopy="false"/>(3)** that you created in the earlier steps of the lab.
+
+     ![](Images/PostgreSQL-image26.png)
+   
 1. Verify that you are **connected(1)** to your database in the **create_graph.sql** file and **run(2)** the query.
 
     ![](Images/L2-S11.png)
@@ -122,15 +126,11 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
     ![](Images/Cell9a.png)
 
-1. Run the **first** cell under **Part 3.11: Adding Memory into the Agent.**  This sets up a custom memory store using PostgreSQL.
+1. Run the cell under **Part 3.11: Adding Memory into the Agent.**  This sets up a custom memory store using PostgreSQL. This adds memory capability by storing and retrieving embeddings to improve agent responses. Observe the output and how the agent’s response incorporates the memory context.
 
-    ![](Images/Cell10.png)
-
-1. Run the **second** cell under **Part 3.11: Adding Memory into the Agent.** This adds memory capability by storing and retrieving embeddings to improve agent responses. Observe the output and how the agent’s response incorporates the memory context.
-
-    ![](Images/Cell11.png)
-
-    ![](Images/Cell11a.png)
+    ![](Images/PostgreSQL-image24.png)
+   
+    ![](Images/PostgreSQL-image25.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
