@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 
 In this task, we will create and test multiple plugins including DatabaseSearchPlugin, SemanticRerankingPlugin, GraphDatabasePlugin, and WeatherPlugin to enhance the agent’s capabilities, then enable semantic memory and reassemble the agent for final testing.
 
-1. Click the **Files(1)** icon in the left navigation bar of VS Code to return to the **Explorer** view. Expand the **`Code`** folder and look for the file named **lab.ipynb(2)**.
+1. Click the **Files (1)** icon in the left navigation bar of VS Code to return to the **Explorer** view. Expand the **`Code`** folder and look for the file named **lab.ipynb (2)**.
 
    ![](Images/L2-S0.png)    
 
@@ -38,18 +38,18 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    ![](Images/Cell1.png)
 
-1. Within **VS Code**, select the **ellipses(1)**, then select **Terminal(2)**, and click on **New Terminal(3)**.
+1. Within **VS Code**, select the **ellipses (1)**, then select **Terminal (2)**, and click on **New Terminal (3)**.
 
     ![](Images/L2-S2.png)
 
- 1. On the terminal, execute the command below to fetch the values of **AZURE_OPENAI_ENDPOINT**, **AZURE_OPENAI_KEY**, **DB_CONFIG - HOST**, and **DB_CONFIG - PASSWORD**. Copy and paste these values into a notepad for later use.
+ 1. On the terminal, execute the command below to fetch the values of **AZURE_OPENAI_ENDPOINT**, **AZURE_OPENAI_KEY**, **DB_CONFIG - HOST**, and **DB_CONFIG - PASSWORD**. Copy and paste these values into a **Notepad** for later use.
 
     ```
     .\Scripts\get_env.ps1
     ```
     ![](Images/L2-S3.png)
 
-1. Navigate back to the **lab.ipynb** file and update the values in the **Part 3.3: Setup environmental connection variables** cell with the values listed below. **Run** the cell after updating the values.
+1. Navigate back to the **lab.ipynb** file and update the values in the **Part 3.3: Setup environmental connection variables** cell with the values listed below, then save the file. **Run** the cell after updating the values.
 
    - **AZURE_OPENAI_ENDPOINT**: Paste the value of **AZURE_OPENAI_ENDPOINT** that you copied in the previous step **(1)**.
    - **AZURE_OPENAI_KEY**: Paste the value of **AZURE_OPENAI_KEY** that you copied in the previous step **(2)**.
@@ -77,23 +77,23 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    >**Note:** This cell might take 5-6 mins to run. 
 
-1. In **VS Code**, in the folder structure, expand the folder **Scripts(1)**, open the **create_graph.sql(2)** file, press **CTRL+SHIFT+C** to open the **VS Code action panel**, and select the connection named **lab<inject key="Deployment ID" enableCopy="false"/>(3)** that you created in the earlier steps of the lab.
+1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **create_graph.sql (2)** file, press **CTRL+SHIFT+C** to open the **VS Code action panel**, and select the connection named **lab<inject key="Deployment ID" enableCopy="false"/> (3)** that you created in the earlier steps of the lab.
 
     ![](Images/L2-S10.png)
 
-   >**Note**: If your not able to press **CTRL+SHIFT+C** to open the **VS Code action panel**, select **create_graph.sql(1)** file, select **Connection (2)** icon then choose **lab<inject key="Deployment ID" enableCopy="false"/>(3)** that you created in the earlier steps of the lab.
+   >**Note**: If you’re unable to press **CTRL+SHIFT+C** to open the **VS Code action** panel, select the **create_graph.sql (1)** file, click the **Connection (2)** icon, and then choose **lab<inject key="Deployment ID" enableCopy="false"/> (3)**.
 
      ![](Images/PostgreSQL-image26.png)
    
-1. Verify that you are **connected(1)** to your database in the **create_graph.sql** file and **run(2)** the query.
+1. Verify that you are **connected (1)** to your database in the **create_graph.sql** file and **run (2)** the query.
 
     ![](Images/L2-S11.png)
 
-1. In **VS Code**, in the folder structure, expand the folder **Scripts(1)**, open the **load_age.ps1(2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**.
+1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **load_age.ps1 (2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**.
 
    ![](Images/L2-S12.png)
 
-1. Within **VS Code**, select the **ellipses(1)**, then select **Terminal(2)**, and click on **New Terminal(3)**.
+1. Within **VS Code**, select the **ellipses (1)**, then select **Terminal (2)**, and click on **New Terminal (3)**.
 
     ![](Images/L2-S2.png)
 
