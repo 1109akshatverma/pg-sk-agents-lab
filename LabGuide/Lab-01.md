@@ -48,7 +48,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. On your **LabVM** desktop, double-click the **VS Code** icon to open Visual Studio Code.
 
-1. Once inside VS Code, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **+ Add Connection (2)** button in the POSTGRESQL panel.
+1. Once inside **VS Code**, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **+ Add Connection (2)** button in the POSTGRESQL panel.
 
    ![](Images/PostgreSQL-image12.png)
 
@@ -62,13 +62,13 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
     ![](Images/PostgreSQL-image13.png)
 
-1. When the sign-in window appears, please enter the username provided below and click Next.
+1. When the **Sign-in** window appears, please enter the **username (1)** provided below and click **Next (2)**.
 
     - **Username:** <inject key="AzureAdUserEmail"></inject>
 
       ![](Images/PostgreSQL-image14.png)
 
-1. When the **Enter Temporary Access Password** window appears, enter the password provided below and click **Sign in**.
+1. When the **Enter Temporary Access Password** window appears, enter the **password (1)** provided below and click **Sign in (2)**.
     
     - **Password:** <inject key="AzureAdUserPassword"></inject>
 
@@ -82,7 +82,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/PostgreSQL-image17.png)
 
-1. Back on the "Connection Dialog", for each of the options, click each drop down and select the following options:
+1. Back on the **Connection Dialog**, for each of the options, click each drop down and select the following options:
     - Subscription: Select the **default Subscription provided (1)**.
     - Resource Group: Select the **SKAgents-<inject key="Deployment ID" enableCopy="false"/> (2)** RG.
     - Location: Select the **default location (3)**.
@@ -92,7 +92,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/L1-S15.png)
 
-1. Continue to Fill the Following options on the "Connection Dialog"
+1. Continue to fill the Following options on the **"Connection Dialog"**
 
     - Click **Add Entra ID (1)**.
     - Select your previously logged-in **Azure Account**. Once the confirmation window appears, close the browser tab.
@@ -109,9 +109,9 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
    
 ## Task 2: Launch PSQL Command Line Shell in VS Code
 
-In this task, you initialize the database with sample tables and data, configure Azure OpenAI endpoint and key settings, and verify them through SQL queries. Finally, you test the AI integration by generating a sample embedding vector using Azure OpenAI within the PostgreSQL database.
+In this task, you will initialize the database with sample tables and data, configure Azure OpenAI endpoint and key settings, and verify them through SQL queries. Finally, you test the AI integration by generating a sample embedding vector using Azure OpenAI within the PostgreSQL database.
 
-1. In VS Code, click **File (1)** in the top left corner and select **Open Folder (2)**.
+1. In **VS Code**, click **File (1)** in the top left corner and select **Open Folder (2)**.
 
    ![](Images/L1-S19.png) 
 
