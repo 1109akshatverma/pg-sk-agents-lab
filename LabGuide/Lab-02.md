@@ -18,33 +18,37 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    ![](Images/L2-S0.png)    
 
-1. To set up the kernel, click on **Select Kernel (1)** and then select **Install/Enable suggested extension Python + Jupyter (2)**.
+1. Make sure Python 3.10.0 is selected, as shown in the screenshot below. If not, please perform the steps mentioned below.
 
-   ![](Images/PostgreSQL-image27.png)
-
-1. You will receive a notification, select the **More actions (1)** icon, then click **Manage Extension (2)**.
-
-   ![](Images/PostgreSQL-image28.png)
-
-   ![](Images/PostgreSQL-image29.png)
-
-1. On the **Jupyter** page, select **Switch to Pre-Release Version**.
-
-   ![](Images/PostgreSQL-image30.png)
-
-1. Next, from the left pane, select **Extensions (1)**, then choose **Jupyter (2)**. Click **Update Code (3)**, and wait for about 1 minute. You will then receive a notification to update.
-
-   ![](Images/PostgreSQL-image31.png)
-
-1. Click **Update**. This will update the extension and restart VS Code automatically.   
-
-   ![](Images/PostgreSQL-image32.png)
+   ![](Images/PostgreSQL-image33.png)
    
-1. Select **Python Environments** and then choose **Python 3.10.0**.
+   -  To set up the kernel, click on **Select Kernel (1)** and then select **Install/Enable suggested extension Python + Jupyter (2)**.
 
-   ![](Images/L2-S23.png)
+      ![](Images/PostgreSQL-image27.png)
 
-   ![](Images/L2-S24.png)
+   -  You will receive a notification, select the **More actions (1)** icon, then click **Manage Extension (2)**.
+
+      ![](Images/PostgreSQL-image28.png)
+
+      ![](Images/PostgreSQL-image29.png)
+
+   -  On the **Jupyter** page, select **Switch to Pre-Release Version**.
+
+      ![](Images/PostgreSQL-image30.png)
+
+   -  Next, from the left pane, select **Extensions (1)**, then choose **Jupyter (2)**. Click **Update Code (3)**, and wait for about 1 minute. You will then receive a notification to update.
+
+      ![](Images/PostgreSQL-image31.png)
+
+   -  Click **Update**. This will update the extension and restart VS Code automatically.   
+
+      ![](Images/PostgreSQL-image32.png)
+   
+   -  Select **Python Environments** and then choose **Python 3.10.0**.
+
+      ![](Images/L2-S23.png)
+
+      ![](Images/L2-S24.png)
 
 ## You can now proceed with running the `lab.ipynb` file to continue with the lab. If you encounter any confusion, please refer to the lab guide starting from here
 
