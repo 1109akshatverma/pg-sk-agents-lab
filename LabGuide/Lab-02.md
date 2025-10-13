@@ -14,13 +14,31 @@ In this lab, you will complete the following tasks:
 
 In this task, we will create and test multiple plugins including DatabaseSearchPlugin, SemanticRerankingPlugin, GraphDatabasePlugin, and WeatherPlugin to enhance the agent’s capabilities, then enable semantic memory and reassemble the agent for final testing.
 
-1. Click the **Files(1)** icon in the left navigation bar of VS Code to return to the **Explorer** view. Expand the **`Code`** folder and look for the file named **lab.ipynb(2)**.
+1. Click the **Files (1)** icon in the left navigation bar of VS Code to return to the **Explorer** view. Expand the **`Code`** folder and look for the file named **lab.ipynb (2)**.
 
    ![](Images/L2-S0.png)    
 
-1. To set up the kernel, click on **Kernel** and then select **Select Another Kernel**.
+1. To set up the kernel, click on **Select Kernel (1)** and then select **Install/Enable suggested extension Python + Jupyter (2)**.
 
-   ![](Images/L2-S22.png)
+   ![](Images/PostgreSQL-image27.png)
+
+1. You will receive a notification, select the **More actions (1)** icon, then click **Manage Extension (2)**.
+
+   ![](Images/PostgreSQL-image28.png)
+
+   ![](Images/PostgreSQL-image29.png)
+
+1. On the **Jupyter** page, select **Switch to Pre-Release Version**.
+
+   ![](Images/PostgreSQL-image30.png)
+
+1. Next, from the left pane, select **Extensions (1)**, then choose **Jupyter (2)**. Click **Update Code (3)**, and wait for about 1 minute. You will then receive a notification to update.
+
+   ![](Images/PostgreSQL-image31.png)
+
+1. Click **Update**. This will update the extension and restart VS Code automatically.   
+
+   ![](Images/PostgreSQL-image32.png)
    
 1. Select **Python Environments** and then choose **Python 3.10.0**.
 
@@ -38,18 +56,18 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    ![](Images/Cell1.png)
 
-1. Within **VS Code**, select the **ellipses(1)**, then select **Terminal(2)**, and click on **New Terminal(3)**.
+1. Within **VS Code**, select the **ellipses (1)**, then select **Terminal (2)**, and click on **New Terminal (3)**.
 
     ![](Images/L2-S2.png)
 
- 1. On the terminal, execute the command below to fetch the values of **AZURE_OPENAI_ENDPOINT**, **AZURE_OPENAI_KEY**, **DB_CONFIG - HOST**, and **DB_CONFIG - PASSWORD**. Copy and paste these values into a notepad for later use.
+ 1. On the terminal, execute the command below to fetch the values of **AZURE_OPENAI_ENDPOINT**, **AZURE_OPENAI_KEY**, **DB_CONFIG - HOST**, and **DB_CONFIG - PASSWORD**. Copy and paste these values into a **Notepad** for later use.
 
     ```
     .\Scripts\get_env.ps1
     ```
     ![](Images/L2-S3.png)
 
-1. Navigate back to the **lab.ipynb** file and update the values in the **Part 3.3: Setup environmental connection variables** cell with the values listed below. **Run** the cell after updating the values.
+1. Navigate back to the **lab.ipynb** file and update the values in the **Part 3.3: Setup environmental connection variables** cell with the values listed below, then save the file. **Run** the cell after updating the values.
 
    - **AZURE_OPENAI_ENDPOINT**: Paste the value of **AZURE_OPENAI_ENDPOINT** that you copied in the previous step **(1)**.
    - **AZURE_OPENAI_KEY**: Paste the value of **AZURE_OPENAI_KEY** that you copied in the previous step **(2)**.
@@ -77,19 +95,23 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    >**Note:** This cell might take 5-6 mins to run. 
 
-1. In **VS Code**, in the folder structure, expand the folder **Scripts(1)**, open the **create_graph.sql(2)** file, press **CTRL+SHIFT+C** to open the **VS Code action panel**, and select the connection named **lab<inject key="Deployment ID" enableCopy="false"/>(3)** that you created in the earlier steps of the lab.
+1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **create_graph.sql (2)** file, press **CTRL+SHIFT+C** to open the **VS Code action panel**, and select the connection named **lab<inject key="Deployment ID" enableCopy="false"/> (3)** that you created in the earlier steps of the lab.
 
     ![](Images/L2-S10.png)
 
-1. Verify that you are **connected(1)** to your database in the **create_graph.sql** file and **run(2)** the query.
+   >**Note**: If you’re unable to press **CTRL+SHIFT+C** to open the **VS Code action** panel, select the **create_graph.sql (1)** file, click the **Connection (2)** icon, and then choose **lab<inject key="Deployment ID" enableCopy="false"/> (3)**.
+
+     ![](Images/PostgreSQL-image26.png)
+   
+1. Verify that you are **connected (1)** to your database in the **create_graph.sql** file and **run (2)** the query.
 
     ![](Images/L2-S11.png)
 
-1. In **VS Code**, in the folder structure, expand the folder **Scripts(1)**, open the **load_age.ps1(2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**.
+1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **load_age.ps1 (2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**.
 
    ![](Images/L2-S12.png)
 
-1. Within **VS Code**, select the **ellipses(1)**, then select **Terminal(2)**, and click on **New Terminal(3)**.
+1. Within **VS Code**, select the **ellipses (1)**, then select **Terminal (2)**, and click on **New Terminal (3)**.
 
     ![](Images/L2-S2.png)
 
@@ -122,15 +144,11 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
     ![](Images/Cell9a.png)
 
-1. Run the **first** cell under **Part 3.11: Adding Memory into the Agent.**  This sets up a custom memory store using PostgreSQL.
+1. Run the cell under **Part 3.11: Adding Memory into the Agent.**  This sets up a custom memory store using PostgreSQL. This adds memory capability by storing and retrieving embeddings to improve agent responses. Observe the output and how the agent’s response incorporates the memory context.
 
-    ![](Images/Cell10.png)
-
-1. Run the **second** cell under **Part 3.11: Adding Memory into the Agent.** This adds memory capability by storing and retrieving embeddings to improve agent responses. Observe the output and how the agent’s response incorporates the memory context.
-
-    ![](Images/Cell11.png)
-
-    ![](Images/Cell11a.png)
+    ![](Images/PostgreSQL-image24.png)
+   
+    ![](Images/PostgreSQL-image25.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
