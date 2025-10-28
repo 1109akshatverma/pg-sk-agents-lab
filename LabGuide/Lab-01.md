@@ -30,7 +30,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/PostgreSQL-image7.png)
 
-1. From the left panel, expand **Security (1)** then select **Authentication (1)**. Verify that the authentication method is set to **Microsoft Authentication Method only (2)**. Then, click **Add Microsoft Entra administrators (3)**.
+1. From the left panel, expand **Security (1)** then select **Authentication (2)**. Verify that the authentication method is set to **Microsoft Authentication Method only (3)**. Then, click **Add Microsoft Entra administrators (4)**.
 
    ![](Images/PostgreSQL-image8.png)
 
@@ -68,9 +68,9 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
       ![](Images/PostgreSQL-image14.png)
 
-1. When the **Enter Temporary Access Password** window appears, enter the **password (1)** provided below and click **Sign in (2)**.
+1. When the **Enter Temporary Access Pass** window appears, enter the **Temporary Access Pass (1)** provided below and click **Sign in (2)**.
     
-    - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
       ![](Images/PostgreSQL-image15.png)
 
@@ -117,7 +117,7 @@ In this task, you will initialize the database with sample tables and data, conf
 
 1. Navigate to **C:\LabFiles(1)**, select the **pg-sk-agents-lab(2)** folder, and click on **Select Folder(3)**.
 
-   ![](Images/L1-S20.png) 
+   ![](Images/bi4.png) 
 
 1. Select **Yes,I trust the authors**.
 
@@ -161,7 +161,7 @@ In this task, you will initialize the database with sample tables and data, conf
 
    ![](Images/E1-S49.png)
 
-1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the connection **lab (2)**.  
+1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the Connection, then expand **lab (2)**.  
 
    - **Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
 
