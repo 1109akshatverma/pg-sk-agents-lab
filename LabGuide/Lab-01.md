@@ -303,6 +303,36 @@ Now that we have some sample data, it's time to generate and store the embedding
    ![](Images/L1-S37.png) 
 
    > **Note:** This may take several minutes to run.
+   
+   > **Note:** If you face a RateLimitReached error, wait for 10 seconds, then run the below SQL script.
+   
+   ```sql
+   DO $$
+   DECLARE
+    batch_size INTEGER := 50;  -- number of rows to process at once
+    rows_updated INTEGER := 1; -- initialize with nonzero
+   BEGIN
+    WHILE rows_updated > 0 LOOP
+        UPDATE cases
+        SET opinions_vector = azure_openai.create_embeddings(
+            'text-embedding-3-small',
+            name || LEFT(opinion, 8000)
+        )::vector
+        WHERE id IN (
+            SELECT id
+            FROM cases
+            WHERE opinions_vector IS NULL
+            LIMIT batch_size
+        );
+
+        GET DIAGNOSTICS rows_updated = ROW_COUNT;
+        RAISE NOTICE 'Processed % rows', rows_updated;
+
+        PERFORM pg_sleep(2);  
+     END LOOP;
+   END $$;
+   ```
+
 
 1. Paste the **query(1)** below into the **query editor** and run the **query(2)** to add a **DiskANN Vector Index** for improving vector search speed.
 
