@@ -304,7 +304,7 @@ Now that we have some sample data, it's time to generate and store the embedding
 
    > **Note:** This may take several minutes to run.
    
-   > **Note:** If you face a RateLimitReached error, wait for 10 seconds, then run the below SQL script.
+   > **Note:** If you face a **RateLimitReached error**, wait for 10 seconds, then run the below SQL script.
    
    ```sql
    DO $$
