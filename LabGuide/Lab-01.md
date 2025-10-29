@@ -333,8 +333,9 @@ Now that we have some sample data, it's time to generate and store the embedding
    END $$;
    ```
 
+## You can proceed with running the query to continue with the lab.
 
-1. Paste the **query(1)** below into the **query editor** and run the **query(2)** to add a **DiskANN Vector Index** for improving vector search speed.
+4. Paste the **query(1)** below into the **query editor** and run the **query(2)** to add a **DiskANN Vector Index** for improving vector search speed.
 
     ```sql
     CREATE EXTENSION IF NOT EXISTS pg_diskann;
@@ -343,14 +344,14 @@ Now that we have some sample data, it's time to generate and store the embedding
 
    ![](Images/L1-S38.png) 
 
-1. Run the query below to create the **DiskANN index** on a table column containing vector data. As your data scales to millions of rows, **DiskANN** improves vector search efficiency.
+5. Run the query below to create the **DiskANN index** on a table column containing vector data. As your data scales to millions of rows, **DiskANN** improves vector search efficiency.
 
     ```sql
     CREATE INDEX cases_cosine_diskann ON cases USING diskann(opinions_vector vector_cosine_ops);
     ```
    ![](Images/L1-S39.png) 
 
-1. Run the query below to see an example vector
+6. Run the query below to see an example vector
 
     ```sql
     SELECT opinions_vector FROM cases LIMIT 1;
