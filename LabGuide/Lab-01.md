@@ -30,7 +30,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/PostgreSQL-image7.png)
 
-1. From the left panel, expand **Security (1)** then select **Authentication (1)**. Verify that the authentication method is set to **Microsoft Authentication Method only (2)**. Then, click **Add Microsoft Entra administrators (3)**.
+1. From the left panel, expand **Security (1)** then select **Authentication (2)**. Verify that the authentication method is set to **Microsoft Authentication Method only (3)**. Then, click **Add Microsoft Entra administrators (4)**.
 
    ![](Images/PostgreSQL-image8.png)
 
@@ -68,9 +68,9 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
       ![](Images/PostgreSQL-image14.png)
 
-1. When the **Enter Temporary Access Password** window appears, enter the **password (1)** provided below and click **Sign in (2)**.
+1. When the **Enter Temporary Access Pass** window appears, enter the **Temporary Access Pass (1)** provided below and click **Sign in (2)**.
     
-    - **Password:** <inject key="AzureAdUserPassword"></inject>
+    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
       ![](Images/PostgreSQL-image15.png)
 
@@ -117,7 +117,7 @@ In this task, you will initialize the database with sample tables and data, conf
 
 1. Navigate to **C:\LabFiles(1)**, select the **pg-sk-agents-lab(2)** folder, and click on **Select Folder(3)**.
 
-   ![](Images/L1-S20.png) 
+   ![](Images/bi4.png) 
 
 1. Select **Yes,I trust the authors**.
 
@@ -161,7 +161,7 @@ In this task, you will initialize the database with sample tables and data, conf
 
    ![](Images/E1-S49.png)
 
-1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the connection **lab (2)**.  
+1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the Connection, then expand **lab (2)**.  
 
    - **Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
 
@@ -303,8 +303,39 @@ Now that we have some sample data, it's time to generate and store the embedding
    ![](Images/L1-S37.png) 
 
    > **Note:** This may take several minutes to run.
+   
+   > **Note:** If you face a **RateLimitReached error**, wait for 10 seconds, then run the below SQL script.
+   
+   ```sql
+   DO $$
+   DECLARE
+    batch_size INTEGER := 50;  -- number of rows to process at once
+    rows_updated INTEGER := 1; -- initialize with nonzero
+   BEGIN
+    WHILE rows_updated > 0 LOOP
+        UPDATE cases
+        SET opinions_vector = azure_openai.create_embeddings(
+            'text-embedding-3-small',
+            name || LEFT(opinion, 8000)
+        )::vector
+        WHERE id IN (
+            SELECT id
+            FROM cases
+            WHERE opinions_vector IS NULL
+            LIMIT batch_size
+        );
 
-1. Paste the **query(1)** below into the **query editor** and run the **query(2)** to add a **DiskANN Vector Index** for improving vector search speed.
+        GET DIAGNOSTICS rows_updated = ROW_COUNT;
+        RAISE NOTICE 'Processed % rows', rows_updated;
+
+        PERFORM pg_sleep(2);  
+     END LOOP;
+   END $$;
+   ```
+
+## You can proceed with running the query to continue with the lab.
+
+4. Paste the **query(1)** below into the **query editor** and run the **query(2)** to add a **DiskANN Vector Index** for improving vector search speed.
 
     ```sql
     CREATE EXTENSION IF NOT EXISTS pg_diskann;
@@ -313,14 +344,14 @@ Now that we have some sample data, it's time to generate and store the embedding
 
    ![](Images/L1-S38.png) 
 
-1. Run the query below to create the **DiskANN index** on a table column containing vector data. As your data scales to millions of rows, **DiskANN** improves vector search efficiency.
+5. Run the query below to create the **DiskANN index** on a table column containing vector data. As your data scales to millions of rows, **DiskANN** improves vector search efficiency.
 
     ```sql
     CREATE INDEX cases_cosine_diskann ON cases USING diskann(opinions_vector vector_cosine_ops);
     ```
    ![](Images/L1-S39.png) 
 
-1. Run the query below to see an example vector
+6. Run the query below to see an example vector
 
     ```sql
     SELECT opinions_vector FROM cases LIMIT 1;

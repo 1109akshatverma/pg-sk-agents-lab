@@ -50,7 +50,7 @@ Welcome to your Postgre SQL and SK Agents Lab Workshop, Let's begin by making th
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![Access Your VM and Lab Guide](./Images/LabVM1.png)
+![Access Your VM and Lab Guide](./Images/bi3.png)
 
 > **NOTE**: **If you see a PowerShell window running, please minimize it after accessing the environment to ensure the script continues to run in the background without interruption.**
 
@@ -68,7 +68,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![Explore Lab Resources](./Images/Environment.png)
+![Explore Lab Resources](./Images/bi1.png)
 
 ## Utilizing the Split Window Feature
 
@@ -86,7 +86,7 @@ Feel free to **start, stop, or restart** your virtual machine as needed from the
 
 1. On your virtual machine, click on the Azure Portal icon.
 
-![azure portal desktop icon](./Images/portal.png)
+![azure portal desktop icon](./Images/bi2.png)
 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
 
@@ -94,9 +94,9 @@ Feel free to **start, stop, or restart** your virtual machine as needed from the
 
      ![](Images/PostgreSQL-image1.png)
 
-3. Next, provide your password:
+3. Now enter the Temporary Access Pass and click on **Sign in**.
 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
      ![](Images/PostgreSQL-image2.png)
 

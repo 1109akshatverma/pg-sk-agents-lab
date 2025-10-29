@@ -80,6 +80,8 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
    - **password**: Paste the value of **DB_CONFIG - PASSWORD** that you copied in the previous step **(5)**.
 
    > **Note:** For **DB_CONFIG - PASSWORD**, this is a very long string due to being an **Entra ID Access Token** — be sure to copy the entire string as the password.
+   
+   > **Note:** Save the file **(Ctrl + S)** before running this cell.
 
    ![](Images/L2-S4a.png)
 
