@@ -48,6 +48,8 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. On your **LabVM** desktop, double-click the **VS Code** icon to open Visual Studio Code.
 
+   ![](./Images/open-vscode.png)
+
 1. Once inside **VS Code**, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **+ Add Connection (2)** button in the POSTGRESQL panel.
 
    ![](Images/PostgreSQL-image12.png)
@@ -74,9 +76,13 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
       ![](Images/PostgreSQL-image15.png)
 
-1. Click **Yes, all apps**.
+1. When **Sign in to all apps, websites, and services on this device?** pop-up appears, Click **Yes**.
 
-    ![](Images/PostgreSQL-image16.png)
+    ![](Images/PostgreSQL-image16-1.png)
+
+1. When **Allow your organization to manage your device?** pop-up appears, click **Yes**.
+
+   ![](./Images/PostgreSQL-image16-2.png)
 
 1. Click **Done** on the Account added to this device window.
 
@@ -169,13 +175,19 @@ In this task, you will initialize the database with sample tables and data, conf
 
 1. In the **Object Explorer panel** at the top left of the screen, expand the **Databases(1)** node. Right-click the database named **cases(2)** and select the option **Connect with PSQL(3)**.
 
+   > **Note:** If you face any error while trying to connect to PSQL, close vs code, reopen it and try again.
+
    ![](Images/L1-S23.png)
 
 1. This will open the **PSQL Command Line Shell** in the **VS Code Terminal**. Once PSQL loads, you should see a command line prompt like **`cases=>`**.
 
    ![](Images/L1-S24.png)
 
-1. To confirm you are in the correct folder context, enter the command: `\! cd`.
+1. To confirm you are in the correct folder context, enter the provided command:
+
+   ```
+   \! cd
+   ```
 
     ![](Images/L1-S25.png)
 
@@ -356,7 +368,9 @@ Now that we have some sample data, it's time to generate and store the embedding
     ```sql
     SELECT opinions_vector FROM cases LIMIT 1;
     ```
-    > **Note:** The output will take up alot of your screen, just hit enter to move down the page to see all of the output
+    > **Note:** The output will take up alot of your screen, just hit enter to move down the page to see all of the output.
+
+    > **Note:** If the output is displayed as Null, proceed with next tasks and comeback later and try again.
 
    ![](Images/L1-S40.png) 
 
