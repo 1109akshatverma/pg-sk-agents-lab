@@ -10,6 +10,8 @@ The lab begins by setting up a data environment and configuring Azure AI extensi
 
 ## Objective 
 
+By the end of this lab, you will be able to:
+
 - **Lab 01 - Enable Intelligent Search in PostgreSQL with Vectors and DiskANN**: This lab establishes a PostgreSQL connection in VS Code, enables AI-driven semantic search using Azure OpenAI embeddings and DiskANN indexing, and integrates structured data with vector-based search for agent-based AI applications.
 
 - **Lab 02 - Build a Semantic Kernel Agentic**: This lab involves building a Semantic Kernel Agentic app in a Python Jupyter Notebook using VS Code, enabling the agent to reason over a legal cases database, integrate external web data, and utilize memory for improved responses over time.
@@ -44,7 +46,7 @@ This architecture represents an agent-driven application workflow designed to bu
 
 ## Getting Started with the lab
 
-Welcome to your Postgre SQL and SK Agents Lab Workshop, Let's begin by making the most of this experience.
+Welcome to your Build Agentic AI with Semantic Kernel and GraphRAG on PostgreSQL Workshop, Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
 
@@ -54,13 +56,7 @@ Once you're ready to dive in, your virtual machine and **Guide** will be right a
 
 > **NOTE**: **If you see a PowerShell window running, please minimize it after accessing the environment to ensure the script continues to run in the background without interruption.**
 
-## Lab Guide Zoom In/Zoom Out
-
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-![](./Images/ZoomIn1.png)
-
-## Virtual Machine & Lab Guide
+### Virtual Machine & Lab Guide
 
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
@@ -82,11 +78,17 @@ Feel free to **start, stop, or restart** your virtual machine as needed from the
 
 ![Manage Your Virtual Machine](./Images/Resources.png)
 
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](./Images/ZoomIn1.png)
+
 ## Let's Get Started with Azure Portal
 
 1. On your virtual machine, click on the Azure Portal icon.
 
-![azure portal desktop icon](./Images/bi2.png)
+   ![azure portal desktop icon](./Images/bi2.png)
 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
 
@@ -104,29 +106,6 @@ Feel free to **start, stop, or restart** your virtual machine as needed from the
 
    ![](Images/PostgreSQL-image3.png)
 
-## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
-
-1. At the **"More information required"** prompt, select **Next**.
-
-1. On the **"Keep your account secure"** page, select **Next** twice.
-
-1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-   - Open **Google Play Store** (Android) or **App Store** (iOS).
-   - Search for **Microsoft Authenticator** and tap **Install**.
-   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-
-1. A **QR code** will be displayed on your computer screen.
-
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-1. After scanning, click **Next** to proceed.
-
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-1. If prompted to stay signed in, you can click "No."
-
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
-
 ## Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
@@ -142,3 +121,4 @@ Click **Next** from the bottom right corner to embark on your Lab journey!
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
 
+## Happy Learning!!
