@@ -75,15 +75,16 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    - **AZURE_OPENAI_ENDPOINT**: Paste the value of **AZURE_OPENAI_ENDPOINT** that you copied in the previous step **(1)**.
    - **AZURE_OPENAI_KEY**: Paste the value of **AZURE_OPENAI_KEY** that you copied in the previous step **(2)**.
-   - **host**: Paste the value of **DB_CONFIG - HOST** that you copied in the previous step **(3)**.
-   - **user**: Enter **<inject key="AzureAdUserEmail"></inject>** **(4)**.
-   - **password**: Paste the value of **DB_CONFIG - PASSWORD** that you copied in the previous step **(5)**.
+   - **AZURE_OPENAI_DEPLOYMENT**: Update the value to **gpt-4.1** **(3)**
+   - **host**: Paste the value of **DB_CONFIG - HOST** that you copied in the previous step **(4)**.
+   - **user**: Enter **<inject key="AzureAdUserEmail"></inject>** **(5)**.
+   - **password**: Paste the value of **DB_CONFIG - PASSWORD** that you copied in the previous step **(6)**.
 
    > **Note:** For **DB_CONFIG - PASSWORD**, this is a very long string due to being an **Entra ID Access Token** — be sure to copy the entire string as the password.
    
    > **Note:** Save the file **(Ctrl + S)** before running this cell.
 
-   ![](Images/L2-S4a.png)
+   ![](Images/L2-S4a-1.png)
 
 1. Now run the **Part 3.4: Create Semantic Kernel Plugin for Basic Database Queries** cell. In this step, we create a custom plugin called **DatabaseSearchPlugin** to give our agent the ability to interact directly with the **case law database** using basic SQL queries.
  
