@@ -309,7 +309,7 @@ Now that we have some sample data, it's time to generate and store the embedding
 
     ```sql
     UPDATE cases
-    SET opinions_vector = azure_openai.create_embeddings('text-embedding-3-small',  name || LEFT(opinion, 8000), max_attempts => 5, retry_delay_ms => 500)::vector
+    SET opinions_vector = azure_openai.create_embeddings('text-embedding-3-small',  name || LEFT(opinion, 2000), max_attempts => 5, retry_delay_ms => 500)::vector
     WHERE opinions_vector IS NULL;
     ```
    ![](Images/L1-S37.png) 
