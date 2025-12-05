@@ -328,7 +328,7 @@ Now that we have some sample data, it's time to generate and store the embedding
         UPDATE cases
         SET opinions_vector = azure_openai.create_embeddings(
             'text-embedding-3-small',
-            name || LEFT(opinion, 8000)
+            name || LEFT(opinion, 2000)
         )::vector
         WHERE id IN (
             SELECT id
