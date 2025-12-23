@@ -1,6 +1,6 @@
 # Lab 01 - Enable Intelligent Search in PostgreSQL with Vectors and DiskANN
 
-### Estimated time: 120 minutes
+### Estimated time: 120 Minutes
 
 This lab focuses on establishing a connection between Visual Studio Code and a PostgreSQL database, launching the PSQL command-line shell, and integrating AI-driven semantic search capabilities. It involves configuring Azure AI extensions, generating and storing embedding vectors using the Azure OpenAI embedding API, and implementing semantic vector search with the DiskANN index for high-performance similarity queries. The lab demonstrates how to enhance traditional text search with advanced semantic search techniques and prepares data environments for agent-based AI applications by combining structured data, vector embeddings, and AI-powered search queries within PostgreSQL.
 
@@ -28,13 +28,13 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. Verify that the **Azure OpenAI** and **Azure Database for PostgreSQL Flexible Server** resources have been created. Then, select the **PostgreSQL Flexible Server instance**.
 
-   ![](Images/PostgreSQL-image7.png)
+   ![](Images/pgselect.png)
 
 1. From the left panel, expand **Security (1)** then select **Authentication (2)**. Verify that the authentication method is set to **Microsoft Authentication Method only (3)**. Then, click **Add Microsoft Entra administrators (4)**.
 
-   ![](Images/PostgreSQL-image8.png)
+   ![](Images/updated-PostgreSQL-image8.png)
 
-1. In the window that appears, search for **<inject key="AzureAdUserEmail"></inject> (1)**, select the **checkbox (2)** next to it, and click **Select(3)**.
+1. In the window that appears, search for **<inject key="AzureAdUserEmail"></inject> (1)**, select the **checkbox (2)** next to it, and click **Select (3)**.
 
    ![](Images/PostgreSQL-image9.png)
 
@@ -44,11 +44,11 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. Wait for the deployment to complete.
 
-   ![](Images/PostgreSQL-image11.png)
+   ![](Images/updated-PostgreSQL-image11.png)
 
 1. On your **LabVM** desktop, double-click the **VS Code** icon to open Visual Studio Code.
 
-   ![](./Images/open-vscode.png)
+   ![](Images/open-vscode.png)
 
 1. Once inside **VS Code**, click the **Elephant icon (1)** in the left navigation panel. After the extension loads, click the **+ Add Connection (2)** button in the POSTGRESQL panel.
 
@@ -58,7 +58,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
    
 1. Select **Browse Azure** as the input type option.
 
-    ![](Images/L1-S9.png)
+    ![](Images/browse-az.png)
 
 1. A pop-up will appear prompting you to sign in to Azure. Click **Allow**.
 
@@ -78,11 +78,11 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. When **Sign in to all apps, websites, and services on this device?** pop-up appears, Click **Yes**.
 
-    ![](Images/PostgreSQL-image16-1.png)
+    ![](Images/updated-PostgreSQL-image16-1.png)
 
 1. When **Allow your organization to manage your device?** pop-up appears, click **Yes**.
 
-   ![](./Images/PostgreSQL-image16-2.png)
+   ![](./Images/updated-PostgreSQL-image16-2.png)
 
 1. Click **Done** on the Account added to this device window.
 
@@ -96,7 +96,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
     - Database: Select **cases (5)**.
     - Authentication Type: Select **Entra Auth (6)**.
 
-   ![](Images/L1-S15.png)
+   ![](Images/connect1.png)
 
 1. Continue to fill the Following options on the **"Connection Dialog"**
 
@@ -111,7 +111,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
       - **Note:** Wait for sometime for the connection to establish.
 
-   ![](Images/Connection1.png)
+   ![](Images/connect2.png)
    
 ## Task 2: Launch PSQL Command Line Shell in VS Code
 
@@ -146,42 +146,43 @@ In this task, you will initialize the database with sample tables and data, conf
 
 1. On the window that appears, select the Azure account **<inject key="AzureAdUserEmail"></inject> (1)** that was used to log in earlier and click on **Continue (2)**.
  
-   ![](Images/PostgreSQL-image21.png)  
+   ![](Images/account-select.png)  
 
 1. Back in the terminal, type **1** and press **Enter** to select the default subscription that appears.
 
     ![](Images/PostgreSQL-image20.png)
 
-1. Execute the below command to navigate to the scripts folder.
+1. Navigate to the scripts folder by running the following command:
   
    ```
    cd C:\LabFiles\pg-sk-agents-lab\scripts\
    ```
    
-1. Execute the command below to navigate to the **Scripts** folder.
+1. Run the PowerShell script to load the environment variables:
 
    ```
    .\get_env.ps1
    ```
-1. Copy the values of `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_KEY` from the output and paste in into a notepad for further use and close the terminal, please see the below screenshot for reference.
 
-   ![](Images/E1-S49.png)
+1. Copy the values of **`AZURE_OPENAI_ENDPOINT`** and **`AZURE_OPENAI_KEY`** from the output and paste in into a notepad for further use and close the terminal, please see the below screenshot for reference.
 
-1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the Connection, then expand **lab (2)**.  
+   ![](Images/endpoint-key.png)
+
+1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the **CONNECTIONS (2)**, then expand **lab<inject key="Deployment ID" enableCopy="false"/> (3)**.  
 
    - **Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
 
-   ![](Images/L1-S22.png)
+   ![](Images/expand-con.png)
 
-1. In the **Object Explorer panel** at the top left of the screen, expand the **Databases(1)** node. Right-click the database named **cases(2)** and select the option **Connect with PSQL(3)**.
+1. In the **Object Explorer panel** at the top left of the screen, expand the **Databases (1)** node. Right-click the database named **cases (2)** and select the option **Connect with PSQL (3)**.
 
    > **Note:** If you face any error while trying to connect to PSQL, close vs code, reopen it and try again.
 
-   ![](Images/L1-S23.png)
+   ![](Images/cases.png)
 
 1. This will open the **PSQL Command Line Shell** in the **VS Code Terminal**. Once PSQL loads, you should see a command line prompt like **`cases=>`**.
 
-   ![](Images/L1-S24.png)
+   ![](Images/psqlcl.png)
 
 1. To confirm you are in the correct folder context, enter the provided command:
 
@@ -260,28 +261,28 @@ In this task, you will initialize the database with sample tables and data, conf
 
 In this task, you will explore how to leverage **AI-driven features within PostgreSQL** to enhance data processing and analysis. These capabilities help automate tasks, improve data insights, and provide advanced functionalities beyond traditional SQL queries.
 
-1. In **VS Code**, expand the **Databases** node, right-click on the **cases(1)** database, and select the **New Query(2)** option.
+1. In **VS Code**, expand the **Databases** node, right-click on the **cases (1)** database, and select the **New Query (2)** option.
 
-   ![](Images/L1-S33.png) 
+   ![](Images/newquery.png) 
 
 1. This will open a **new query editor window**. Notice the **green circle** at the bottom right, indicating you are successfully connected to the **cases** database.
 
-1. Enter the following **SQL query(1)** in the query editor and **run the query(2)**. Notice the results appear in the **PostgreSQL Query Results** panel.
+1. Enter the following **SQL query (1)** in the query editor and **run the query (2)**. Notice the results appear in the **POSTGRESQL QUERY RESULTS (3)** panel.
 
    ```
    SELECT NAME FROM CASES LIMIT 5;
    ``` 
 
-   ![](Images/L1-S34.png)  
+   ![](Images/newqueryrun.png)  
 
-1. We will start by searching for cases mentioning **"Water leaking into the apartment from the floor above."** to perform case-insensitive searches within text fields. Paste the **query(1)** below into the **query editor** and run the **query(2)**.
+1. We will start by searching for cases mentioning **"Water leaking into the apartment from the floor above."** to perform case-insensitive searches within text fields. Paste the **query (1)** below into the **query editor** and run the **query (2)**.
  
    ```
    SELECT id, name, opinion
    FROM cases
    WHERE opinion ILIKE '%Water leaking into the apartment from the floor above';
    ```
-   ![](Images/L1-S35.png) 
+   ![](Images/newqueryrun2.png) 
 
    > Note: It does not return any results because those exact words are not mentioned in the opinion. As you can see, there are no results for what the user wants to find.
 
@@ -290,29 +291,30 @@ In this task, you will explore how to leverage **AI-driven features within Postg
 In this task, we will focus on generating and storing **embedding vectors**. We are going to use these in our **Agent App** in later steps. Embedding vectors represent data points in a high-dimensional space, allowing for efficient similarity searches and advanced analytics.
 Now that we have some sample data, it's time to generate and store the embedding vectors. The `<code spellcheck="false">azure_ai</code>` extension makes it easy to call the **Azure OpenAI embedding API**.
 
-1. On the **Query Editor**, you are now ready to install the **vector extension**. Paste the **query(1)** below into the **query editor** and run the **query(2)**.
+1. On the **Query Editor**, you are now ready to install the **vector extension**. Paste the **query (1)** below into the **query editor** and run the **query (2)**.
 
     ```sql
     CREATE EXTENSION IF NOT EXISTS vector;
     ```
-   ![](Images/create_extension.png) 
+   ![](Images/t4ext.png) 
 
-1. Add the **embedding vector column**. The `<code spellcheck="false">text-embedding-3-small</code>` model is configured to return **1,536 dimensions**, so use that for the vector column size. Paste the **query(1)** below into the **query editor** and run the **query(2)**.
+1. Add the **embedding vector column**. The `<code spellcheck="false">text-embedding-3-small</code>` model is configured to return **1,536 dimensions**, so use that for the vector column size. Paste the **query (1)** below into the **query editor** and run the **query (2)**.
 
     ```sql
     ALTER TABLE cases ADD COLUMN opinions_vector vector(1536);
     ```
 
-   ![](Images/L1-S36.png) 
+   ![](Images/altertable.png) 
 
-1. Generate an **embedding vector** for the opinion of each case by calling **Azure OpenAI** through the `create_embeddings` user-defined function, which is implemented by the **azure_ai extension**. Paste the **query(1)** below into the **query editor** and run the **query(2)**.
+1. Generate an **embedding vector** for the opinion of each case by calling **Azure OpenAI** through the `create_embeddings` user-defined function, which is implemented by the **azure_ai extension**. Paste the **query (1)** below into the **query editor** and run the **query (2)**.
 
     ```sql
     UPDATE cases
     SET opinions_vector = azure_openai.create_embeddings('text-embedding-3-small',  name || LEFT(opinion, 2000), max_attempts => 5, retry_delay_ms => 500)::vector
     WHERE opinions_vector IS NULL;
     ```
-   ![](Images/L1-S37.png) 
+
+   ![](Images/opinion-vector.png) 
 
    > **Note:** This may take several minutes to run.
    
@@ -347,21 +349,22 @@ Now that we have some sample data, it's time to generate and store the embedding
 
 ## You can proceed with running the query to continue with the lab.
 
-4. Paste the **query(1)** below into the **query editor** and run the **query(2)** to add a **DiskANN Vector Index** for improving vector search speed.
+4. Paste the **query (1)** below into the **query editor** and run the **query (2)** to add a **DiskANN Vector Index** for improving vector search speed.
 
     ```sql
     CREATE EXTENSION IF NOT EXISTS pg_diskann;
     CREATE EXTENSION IF NOT EXISTS age;
     ```
 
-   ![](Images/L1-S38.png) 
+   ![](Images/vectorindex.png) 
 
 5. Run the query below to create the **DiskANN index** on a table column containing vector data. As your data scales to millions of rows, **DiskANN** improves vector search efficiency.
 
     ```sql
     CREATE INDEX cases_cosine_diskann ON cases USING diskann(opinions_vector vector_cosine_ops);
     ```
-   ![](Images/L1-S39.png) 
+
+   ![](Images/cosine.png) 
 
 6. Run the query below to see an example vector
 
@@ -372,7 +375,7 @@ Now that we have some sample data, it's time to generate and store the embedding
 
     > **Note:** If the output is displayed as Null, proceed with next tasks and comeback later and try again.
 
-   ![](Images/L1-S40.png) 
+   ![](Images/op-vector.png) 
 
 ## Task 5: Perform a Semantic Search Query
 
@@ -384,7 +387,7 @@ In this task, we will use the existing data augmented with embedding vectors to 
     SELECT azure_openai.create_embeddings('text-embedding-3-small', 'Water leaking into the apartment from the floor above.');
     ```
 
-   ![](Images/L1-S41.png) 
+   ![](Images/t5-1.png) 
 
 2. Run the below query to use the embedding in a cosine search to fetch the top 10 most similar cases to the query.
 
@@ -395,7 +398,7 @@ In this task, we will use the existing data augmented with embedding vectors to 
     LIMIT 10;
     ```
 
-   ![](Images/L1-S42.png) 
+   ![](Images/t5-2.png) 
 
 3. Run the below query to project the `<code spellcheck="false">opinion</code>` column, allowing you to read the text of the matching rows whose opinions were semantically similar. For example, this query returns the best match.
 
@@ -406,7 +409,7 @@ In this task, we will use the existing data augmented with embedding vectors to 
     LIMIT 1;
     ```
 
-   ![](Images/L1-S43.png) 
+   ![](Images/t5-3.png) 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.

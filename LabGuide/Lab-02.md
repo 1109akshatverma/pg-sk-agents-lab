@@ -1,6 +1,6 @@
 # Lab 02 - Build a Semantic Kernel Agent
 
-### Estimated time: 120 minutes
+### Estimated time: 120 Minutes
 
 In this lab, you will take everything learned so far and build our Agentic App. You will work in a Python Jupyter Notebook in VS Code to create a Semantic Kernel Agent that can reason over the legal cases database deployed earlier. Additionally, you will incorporate external web service data and use memory to improve the agent’s responses over time.
 
@@ -50,11 +50,11 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
       ![](Images/L2-S24.png)
 
-## You can now proceed with running the `lab.ipynb` file to continue with the lab. If you encounter any confusion, please refer to the lab guide starting from here
+## You can now proceed with running the **`lab.ipynb`** file to continue with the lab. If you encounter any confusion, please refer to the lab guide starting from here
 
 1. Run the **first** cell under **Part 3.2: Setup the Agent App Python imports**. This installs Python packages listed in the requirements.txt file.
 
-   ![](Images/A1.png)
+   ![](Images/localsetup.png)
 
 1. Run the **second** cell under **Part 3.2: Setup the Agent App Python imports**. This step imports the necessary modules, preparing the technical foundation for building an AI-powered agent that interacts with a **PostgreSQL database** and **OpenAI services**.
 
@@ -69,7 +69,8 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
     ```
     .\Scripts\get_env.ps1
     ```
-    ![](Images/L2-S3.png)
+
+    ![](Images/updated-L2-S3.png)
 
 1. Navigate back to the **lab.ipynb** file and update the values in the **Part 3.3: Setup environmental connection variables** cell with the values listed below, then save the file. **Run** the cell after updating the values.
 
@@ -84,7 +85,7 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
    
    > **Note:** Save the file **(Ctrl + S)** before running this cell.
 
-   ![](Images/L2-S4a-1.png)
+   ![](Images/envconl2.png)
 
 1. Now run the **Part 3.4: Create Semantic Kernel Plugin for Basic Database Queries** cell. In this step, we create a custom plugin called **DatabaseSearchPlugin** to give our agent the ability to interact directly with the **case law database** using basic SQL queries.
  
@@ -98,25 +99,25 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
 1. Run the cell under **Part 3.6: Improve Agent Accuracy by Adding Semantic Re-ranking Query Plugin**. In this step, we add a new plugin called **SemanticRerankingPlugin** to increase the precision of our agent’s search results.
 
-   ![](Images/Cell5.png)
+   ![](Images/3.6accuracy.png)
 
    >**Note:** This cell might take 5-6 mins to run. 
 
 1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **create_graph.sql (2)** file, press **CTRL+SHIFT+C** to open the **VS Code action panel**, and select the connection named **lab<inject key="Deployment ID" enableCopy="false"/> (3)** that you created in the earlier steps of the lab.
 
-    ![](Images/L2-S10.png)
+    ![](Images/up-L2-S10.png)
 
    >**Note**: If you’re unable to press **CTRL+SHIFT+C** to open the **VS Code action** panel, select the **create_graph.sql (1)** file, click the **Connection (2)** icon, and then choose **lab<inject key="Deployment ID" enableCopy="false"/> (3)**.
 
-     ![](Images/PostgreSQL-image26.png)
+     ![](Images/up-PostgreSQL-image26.png)
    
 1. Verify that you are **connected (1)** to your database in the **create_graph.sql** file and **run (2)** the query.
 
-    ![](Images/L2-S11.png)
+    ![](Images/cgsql.png)
 
 1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **load_age.ps1 (2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**.
 
-   ![](Images/L2-S12.png)
+   ![](Images/l2-11.png)
 
 1. Within **VS Code**, select the **ellipses (1)**, then select **Terminal (2)**, and click on **New Terminal (3)**.
 

@@ -52,7 +52,7 @@ Welcome to your Build Agentic AI with Semantic Kernel and GraphRAG on PostgreSQL
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![Access Your VM and Lab Guide](./Images/bi3.png)
+![Access Your VM and Lab Guide](./Images/up-bi3.png)
 
 > **NOTE**: **If you see a PowerShell window running, please minimize it after accessing the environment to ensure the script continues to run in the background without interruption.**
 
@@ -74,15 +74,15 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Managing Your Virtual Machine
 
-Feel free to **start, stop, or restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-![Manage Your Virtual Machine](./Images/Resources.png)
+![Manage Your Virtual Machine](./Images/up-Resources.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![](./Images/ZoomIn1.png)
+![](./Images/zum.png)
 
 ## Let's Get Started with Azure Portal
 
@@ -90,13 +90,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![azure portal desktop icon](./Images/bi2.png)
 
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+2. On the **Sign in to Microsoft Azure** tab, enter the following **email/username (1)**, and click on **Next (2)**. 
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
      ![](Images/PostgreSQL-image1.png)
 
-3. Now enter the Temporary Access Pass and click on **Sign in**.
+3. Now enter the following **Temporary Access Pass (1)** and click on **Sign in (2)**.
 
    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
