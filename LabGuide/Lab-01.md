@@ -347,7 +347,7 @@ Now that we have some sample data, it's time to generate and store the embedding
    END $$;
    ```
 
-## You can proceed with running the query to continue with the lab.
+   >**Note:** You can proceed with running the query to continue with the lab.
 
 4. Paste the **query (1)** below into the **query editor** and run the **query (2)** to add a **DiskANN Vector Index** for improving vector search speed.
 
