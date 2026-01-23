@@ -50,7 +50,7 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
       ![](Images/L2-S24.png)
 
-## You can now proceed with running the **`lab.ipynb`** file to continue with the lab. If you encounter any confusion, please refer to the lab guide starting from here
+>**Note:** You can now proceed with running the **`lab.ipynb`** file to continue with the lab. If you encounter any confusion, please refer to the lab guide starting from here.
 
 1. Run the **first** cell under **Part 3.2: Setup the Agent App Python imports**. This installs Python packages listed in the requirements.txt file.
 
@@ -177,4 +177,4 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 - https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/overview
 - https://learn.microsoft.com/en-us/azure/ai-services/openai/overview
 
-# You have successfully completed the lab!
+## You have successfully completed the lab!
