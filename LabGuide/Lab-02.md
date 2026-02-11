@@ -142,6 +142,8 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
    ![](Images/L2-S16.png)
 
+   >**Note:** If a cell takes longer than 5 minutes to execute, please restart the kernel and run all the cells again from the beginning.
+
 1. Run the cell **Part 3.9: Adding a Weather PlugIn to the Agent**. In this step, we introduce a **WeatherPlugin** that enables the agent to retrieve historical weather data (specifically rainfall) based on a given date and geographic location. This is especially useful in real estate or tenant-landlord disputes where weather-related damage may be a legal factor.
   
     ![](Images/Cell8.png)
