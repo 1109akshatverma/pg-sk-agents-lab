@@ -52,9 +52,9 @@ Welcome to your Build Agentic AI with Semantic Kernel and GraphRAG on PostgreSQL
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![Access Your VM and Lab Guide](./Images/up-bi3.png)
+![Access Your VM and Lab Guide](./Images/guideee.png)
 
-> **NOTE**: **If you see a PowerShell window running, please minimize it after accessing the environment to ensure the script continues to run in the background without interruption.**
+> **Note:** **If you see a PowerShell window running, please minimize it after accessing the environment to ensure the script continues to run in the background without interruption.**
 
 ### Virtual Machine & Lab Guide
 
@@ -68,43 +68,43 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 ## Utilizing the Split Window Feature
 
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
-![Use the Split Window Feature](./Images/Split1.png)
+![Use the Split Window Feature](./Images/splittt.png)
 
 ## Managing Your Virtual Machine
 
-Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
-![Manage Your Virtual Machine](./Images/up-Resources.png)
+![Manage Your Virtual Machine](./Images/vmssr2.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![](./Images/zum.png)
+![](./Images/zumm.png)
 
 ## Let's Get Started with Azure Portal
 
 1. On your virtual machine, click on the Azure Portal icon.
 
-   ![azure portal desktop icon](./Images/bi2.png)
+   ![azure portal desktop icon](./Images/portalll.png)
 
 2. On the **Sign in to Microsoft Azure** tab, enter the following **email/username (1)**, and click on **Next (2)**. 
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-     ![](Images/PostgreSQL-image1.png)
+     ![](Images/odlusr.png)
 
 3. Now enter the following **Temporary Access Pass (1)** and click on **Sign in (2)**.
 
    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
-     ![](Images/PostgreSQL-image2.png)
+     ![](Images/odltap.png)
 
 4. If prompted to **stay signed in**, you can click **No**.
 
-   ![](Images/PostgreSQL-image3.png)
+   ![](Images/staysignn.png)
 
 ## Support Contact
 
@@ -117,7 +117,7 @@ Learner Support Contacts:
 
 Click **Next** from the bottom right corner to embark on your Lab journey!
 
-![](Images/PostgreSQL-image4.png)
+![](Images/1nct.png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
 

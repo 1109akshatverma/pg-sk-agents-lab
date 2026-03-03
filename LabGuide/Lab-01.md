@@ -20,7 +20,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
 1. On the Azure portal home page, search for **Resource groups (1)** in the search bar and select **Resource groups (2)** from the results.
 
-   ![](Images/PostgreSQL-image5.png)
+   ![](Images/rg.png)
 
 1. Select the **SKAgents-<inject key="Deployment ID" enableCopy="false"/>** resource group.
 
@@ -68,13 +68,13 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
     - **Username:** <inject key="AzureAdUserEmail"></inject>
 
-      ![](Images/PostgreSQL-image14.png)
+      ![](Images/odlusr.png)
 
 1. When the **Enter Temporary Access Pass** window appears, enter the **Temporary Access Pass (1)** provided below and click **Sign in (2)**.
     
     - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
-      ![](Images/PostgreSQL-image15.png)
+      ![](Images/odltap.png)
 
 1. When **Sign in to all apps, websites, and services on this device?** pop-up appears, Click **Yes**.
 
@@ -84,7 +84,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](./Images/updated-PostgreSQL-image16-2.png)
 
-1. Click **Done** on the Account added to this device window.
+1. Click **Done** on the **Account added to this device** window.
 
    ![](Images/PostgreSQL-image17.png)
 
@@ -142,6 +142,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    az login
    ```
+
    ![](Images/E1-S46.png)
 
 1. On the window that appears, select the Azure account **<inject key="AzureAdUserEmail"></inject> (1)** that was used to log in earlier and click on **Continue (2)**.
@@ -170,7 +171,7 @@ In this task, you will initialize the database with sample tables and data, conf
 
 1. Maximize **VS Code**. Click on the **Elephant icon (1)** from the left. Expand the **CONNECTIONS (2)**, then expand **lab<inject key="Deployment ID" enableCopy="false"/> (3)**.  
 
-   - **Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
+   >**Note:** If a pop-up appears asking you to sign in, select the previously logged-in Azure account and close the browser tab once signed in.
 
    ![](Images/expand-con.png)
 
@@ -197,6 +198,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    \i ./Scripts/initialize_dataset.sql;
    ```
+
    ![](Images/L1-S26.png)
 
 1. Execute the following command to allow the extended display to be automatically applied.
@@ -204,6 +206,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    \x auto
    ```   
+
    ![](Images/L1-S27.png)   
    
 1. Retrieve a sample of data from the **cases** table in the dataset. This allows you to examine the structure and content of the data stored in the database.
@@ -211,6 +214,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    SELECT name FROM cases LIMIT 5;
    ```
+
    ![](Images/L1-S28.png)  
  
 1. Execute the following command in **VS Code PSQL Command Line Shell** to verify the extensions in your server's allowlist.
@@ -218,6 +222,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    SHOW azure.extensions;
    ```
+
    ![](Images/L1-S29.png)  
 
 1. Run the below command to install azure_ai extension.
@@ -236,6 +241,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    SELECT azure_ai.set_setting('azure_openai.subscription_key', '{AZURE_OPENAI_KEY}');
    ``` 
+
    ![](Images/L1-S30.png)     
 
 1. Verify the settings written into the azure_ai.settings table using the following queries:
@@ -255,6 +261,7 @@ In this task, you will initialize the database with sample tables and data, conf
    ```
    SELECT LEFT(azure_openai.create_embeddings('text-embedding-3-small', 'Sample text for PostgreSQL Lab')::text, 100) AS vector_preview;
    ```
+
    ![](Images/L1-S32.png)      
 
 ## Task 3: Using AI-driven features in Postgres
@@ -284,7 +291,7 @@ In this task, you will explore how to leverage **AI-driven features within Postg
    ```
    ![](Images/newqueryrun2.png) 
 
-   > Note: It does not return any results because those exact words are not mentioned in the opinion. As you can see, there are no results for what the user wants to find.
+   >**Note:** It does not return any results because those exact words are not mentioned in the opinion. As you can see, there are no results for what the user wants to find.
 
 ## Task 4: Using Semantic Vector Search and DiskANN Index
 
@@ -296,6 +303,7 @@ Now that we have some sample data, it's time to generate and store the embedding
     ```sql
     CREATE EXTENSION IF NOT EXISTS vector;
     ```
+
    ![](Images/t4ext.png) 
 
 1. Add the **embedding vector column**. The `<code spellcheck="false">text-embedding-3-small</code>` model is configured to return **1,536 dimensions**, so use that for the vector column size. Paste the **query (1)** below into the **query editor** and run the **query (2)**.
@@ -428,3 +436,4 @@ In this lab, you have accomplished the following:
 
 ## You have successfully finished the lab. Click Next to continue to the next lab.
 
+![](Images/2nct.png)
