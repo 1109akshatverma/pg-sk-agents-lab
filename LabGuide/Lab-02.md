@@ -115,7 +115,7 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
 
     ![](Images/cgsql.png)
 
-1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **load_age.ps1 (2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**.
+1. In **VS Code**, in the folder structure, expand the folder **Scripts (1)**, open the **load_age.ps1 (2)** file, and replace the **Resource Group Name** with **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)** and Save the file using **(Ctrl + S)**.
 
    ![](Images/l2-11.png)
 
@@ -128,11 +128,12 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
    ```
    .\Scripts\load_age.ps1
    ``` 
-   > Note: This will run through 3 main commands, all together will take around 60-120 seconds.  
+
+   > **Note:** This will run through 3 main commands, all together will take around 60-120 seconds.  
 
    ![](Images/L2-S13.png)
 
-1. Run the cell under **Part 3.7: Add a GraphRAG Query PlugIn to the Agent for Additional Accuracy Improvements**. In this step, we build another advanced plugin called **GraphDatabasePlugin**, which combines vector search with graph analysis to find the most influential cases related to a query topic.
+1. Return to **lab.ipynb** and run the cell under **Part 3.7: Add a GraphRAG Query PlugIn to the Agent for Additional Accuracy Improvements**. In this step, we build another advanced plugin called **GraphDatabasePlugin**, which combines vector search with graph analysis to find the most influential cases related to a query topic.
 
    ![](Images/Cell6.png)
 
