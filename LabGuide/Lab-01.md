@@ -76,7 +76,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
       ![](Images/odltap.png)
 
-1. When **Sign in to all apps, websites, and services on this device?** pop-up appears, Click **Yes**.
+1. When **Sign in to all apps, websites, and services on this device?** pop-up appears, click **Yes**.
 
     ![](Images/updated-PostgreSQL-image16-1.png)
 
@@ -88,7 +88,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/PostgreSQL-image17.png)
 
-1. Back on the **Connection Dialog**, for each of the options, click each drop down and select the following options:
+1. Back on the **Connection Dialog**, for each of the options, click each drop-down and select the following options:
     - Subscription: Select the **default Subscription provided (1)**.
     - Resource Group: Select the **SKAgents-<inject key="Deployment ID" enableCopy="false"/> (2)** RG.
     - Location: Select the **default location (3)**.
@@ -109,27 +109,27 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
     - Click **Test Connection (5)** to verify connectivity.
     - Click **Save and Connect (6)** to finalize the connection.
 
-      - **Note:** Wait for sometime for the connection to establish.
+      - **Note:** Wait for some time for the connection to establish.
 
    ![](Images/connect2.png)
    
 ## Task 2: Launch PSQL Command Line Shell in VS Code
 
-In this task, you will initialize the database with sample tables and data, configure Azure OpenAI endpoint and key settings, and verify them through SQL queries. Finally, you test the AI integration by generating a sample embedding vector using Azure OpenAI within the PostgreSQL database.
+In this task, you will initialize the database with sample tables and data, configure the Azure OpenAI endpoint and key settings, and verify them through SQL queries. Finally, you test the AI integration by generating a sample embedding vector using Azure OpenAI within the PostgreSQL database.
 
 1. In **VS Code**, click **File (1)** in the top left corner and select **Open Folder (2)**.
 
    ![](Images/L1-S19.png) 
 
-1. Navigate to **C:\LabFiles(1)**, select the **pg-sk-agents-lab(2)** folder, and click on **Select Folder(3)**.
+1. Navigate to **C:\LabFiles (1)**, select the **pg-sk-agents-lab (2)** folder, and click on **Select Folder (3)**.
 
    ![](Images/bi4.png) 
 
-1. Select **Yes,I trust the authors**.
+1. Select **Yes, I trust the authors**.
 
    ![](Images/L1-S21.png)
 
-1. Expand the **Scripts folder(1)**, open **get_env.ps1(2)**, update the Resource Group name as **SKAgents-<inject key="Deployment ID" enableCopy="false"/>(3)**, and save the file.
+1. Expand the **Scripts folder (1)**, open **get_env.ps1 (2)**, update the Resource Group name as **SKAgents-<inject key="Deployment ID" enableCopy="false"/> (3)**, and save the file.
 
    ![](Images/PostgreSQL-image18.png)
 
@@ -165,7 +165,7 @@ In this task, you will initialize the database with sample tables and data, conf
    .\get_env.ps1
    ```
 
-1. Copy the values of **`AZURE_OPENAI_ENDPOINT`** and **`AZURE_OPENAI_KEY`** from the output and paste in into a notepad for further use and close the terminal, please see the below screenshot for reference.
+1. Copy the values of **`AZURE_OPENAI_ENDPOINT`** and **`AZURE_OPENAI_KEY`** from the output and paste them into a notepad for further use, and close the terminal. Please see the screenshot below for reference.
 
    ![](Images/endpoint-key.png)
 
@@ -177,7 +177,7 @@ In this task, you will initialize the database with sample tables and data, conf
 
 1. In the **Object Explorer panel** at the top left of the screen, expand the **Databases (1)** node. Right-click the database named **cases (2)** and select the option **Connect with PSQL (3)**.
 
-   > **Note:** If you face any error while trying to connect to PSQL, close vs code, reopen it and try again.
+   > **Note:** If you face any error while trying to connect to PSQL, close VS Code, reopen it and try again.
 
    ![](Images/cases.png)
 
@@ -379,9 +379,9 @@ Now that we have some sample data, it's time to generate and store the embedding
     ```sql
     SELECT opinions_vector FROM cases LIMIT 1;
     ```
-    > **Note:** The output will take up alot of your screen, just hit enter to move down the page to see all of the output.
+    > **Note:** The output will take up a lot of your screen; just hit enter to move down the page to see all of the output.
 
-    > **Note:** If the output is displayed as Null, proceed with next tasks and comeback later and try again.
+    > **Note:** If the output is displayed as Null, proceed with the next tasks and come back later and try again.
 
    ![](Images/op-vector.png) 
 
