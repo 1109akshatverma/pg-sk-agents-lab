@@ -46,7 +46,7 @@ This architecture represents an agent-driven application workflow designed to bu
 
 ## Getting Started with the lab
 
-Welcome to your Build Agentic AI with Semantic Kernel and GraphRAG on PostgreSQL Workshop, Let's begin by making the most of this experience:
+Welcome to your Build Agentic AI with Semantic Kernel and GraphRAG on PostgreSQL Workshop. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
 
