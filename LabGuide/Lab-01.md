@@ -30,7 +30,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
 
    ![](Images/pgselect.png)
 
-1. From the left panel, expand **Security (1)** then select **Authentication (2)**. Verify that the authentication method is set to **Microsoft Authentication Method only (3)**. Then, click **Add Microsoft Entra administrators (4)**.
+1. From the left panel, expand **Security (1)** then select **Authentication (2)**. Verify that the authentication method is set to **Microsoft Entra authentication only (3)**. Then, click **+ Add Microsoft Entra administrators (4)**.
 
    ![](Images/updated-PostgreSQL-image8.png)
 
@@ -96,7 +96,7 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
     - Database: Select **cases (5)**.
     - Authentication Type: Select **Entra Auth (6)**.
 
-   ![](Images/connect1.png)
+      ![](Images/connect1.png)
 
 1. Continue to fill the Following options on the **"Connection Dialog"**
 
@@ -109,9 +109,9 @@ In this task, you will connect a PostgreSQL Flexible Server on Azure to VS Code 
     - Click **Test Connection (5)** to verify connectivity.
     - Click **Save and Connect (6)** to finalize the connection.
 
-      - **Note:** Wait for some time for the connection to establish.
+      ![](Images/connect2.png)
 
-   ![](Images/connect2.png)
+      >**Note:** Wait for some time for the connection to establish.
    
 ## Task 2: Launch PSQL Command Line Shell in VS Code
 
