@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Semantic Agent Configuration and Plugin Assembly
 
-In this task, we will create and test multiple plugins including DatabaseSearchPlugin, SemanticRerankingPlugin, GraphDatabasePlugin, and WeatherPlugin to enhance the agent’s capabilities, then enable semantic memory and reassemble the agent for final testing.
+In this task, we will create and test multiple plugins, including DatabaseSearchPlugin, SemanticRerankingPlugin, GraphDatabasePlugin, and WeatherPlugin, to enhance the agent’s capabilities, then enable semantic memory and reassemble the agent for final testing.
 
 1. Click the **Files (1)** icon in the left navigation bar of VS Code to return to the **Explorer** view. Expand the **`Code`** folder and look for the file named **lab.ipynb (2)**.
 
@@ -129,7 +129,7 @@ In this task, we will create and test multiple plugins including DatabaseSearchP
    .\Scripts\load_age.ps1
    ``` 
 
-   > **Note:** This will run through 3 main commands, all together will take around 60-120 seconds.  
+   > **Note:** This will run through 3 main commands; altogether will take around 60-120 seconds.  
 
    ![](Images/L2-S13.png)
 
