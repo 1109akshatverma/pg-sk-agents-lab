@@ -1,6 +1,6 @@
 # Lab 02 - Build a Semantic Kernel Agent
 
-### Estimated time: 120 Minutes
+### Estimated Duration: 120 Minutes
 
 In this lab, you will take everything learned so far and build our Agentic App. You will work in a Python Jupyter Notebook in VS Code to create a Semantic Kernel Agent that can reason over the legal cases database deployed earlier. Additionally, you will incorporate external web service data and use memory to improve the agent’s responses over time.
 
