@@ -434,6 +434,6 @@ In this lab, you have accomplished the following:
 - Launched and ran commands on PSQL Command Line Shell
 - Ran Semantic Search Query
 
-## You have successfully finished the lab. Click Next to continue to the next lab.
+## You have successfully completed the lab. Click on **Next >>** from the bottom right corner to proceed with the next lab.
 
 ![](Images/2nct.png)
